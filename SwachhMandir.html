@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="gu" data-lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>સ્વચ્છ મંદિર – પ્લાસ્ટિક મુક્ત મંદિર | Swachh Mandir</title>
+<meta name="description" content="Swachh Mandir – Plastic Free Temple Initiative by Mukhyaji Group. Take the Shravan pledge to keep temples plastic-free.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%95%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Gujarati:wght@500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600&family=Noto+Serif+Devanagari:wght@500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --cream:#FBF3E1;
+    --paper:#FFFBF2;
+    --maroon:#7A1F2A;
+    --maroon-deep:#5A1620;
+    --gold:#C6952B;
+    --gold-soft:#E7CE8E;
+    --navy:#142950;
+    --forest:#1F5C3C;
+    --ink:#2B2118;
+    --ink-soft:#5b4f42;
+    --line: rgba(43,33,24,0.12);
+    --shadow: 0 12px 30px rgba(43,33,24,0.10);
+  }
+
+  [data-lang="gu"]{ --f-display:'Noto Serif Gujarati', serif; --f-body:'Noto Sans Gujarati', sans-serif; }
+  [data-lang="hi"]{ --f-display:'Noto Serif Devanagari', serif; --f-body:'Noto Sans Devanagari', sans-serif; }
+  [data-lang="en"]{ --f-display:'Fraunces', serif; --f-body:'Inter', sans-serif; }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:var(--f-body);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background-image:
+      radial-gradient(circle at 15% 8%, rgba(198,149,43,0.10), transparent 40%),
+      radial-gradient(circle at 85% 92%, rgba(122,31,42,0.08), transparent 45%);
+    pointer-events:none;
+    z-index:0;
+  }
+  [data-lang] [lang-block]{ display:none; }
+  html[data-lang="gu"] [lang-block="gu"],
+  html[data-lang="hi"] [lang-block="hi"],
+  html[data-lang="en"] [lang-block="en"]{ display:block; }
+  html[data-lang="gu"] span[lang-block="gu"],
+  html[data-lang="hi"] span[lang-block="hi"],
+  html[data-lang="en"] span[lang-block="en"]{ display:inline; }
+
+  .wrap{max-width:760px; margin:0 auto; padding:0 24px; position:relative; z-index:1;}
+
+  /* ---------- TORAN / TOP BUNTING ---------- */
+  .toran{ width:100%; height:34px; overflow:hidden; }
+  .toran svg{ width:100%; height:100%; display:block; }
+
+  /* ---------- HEADER ---------- */
+  header{ padding:36px 0 18px; text-align:center; }
+  .kalash{ font-size:34px; line-height:1; margin-bottom:10px; filter: drop-shadow(0 3px 6px rgba(122,31,42,0.25)); }
+  .eyebrow{
+    font-family:var(--f-body); font-size:12.5px; letter-spacing:0.16em; text-transform:uppercase;
+    color:var(--maroon); font-weight:600; margin-bottom:6px;
+  }
+  .brandline{
+    font-family:var(--f-display); font-weight:700; color:var(--navy);
+    font-size:clamp(20px,4.4vw,27px); letter-spacing:0.01em;
+  }
+
+  /* language switcher */
+  .langbar{
+    display:flex; justify-content:center; gap:8px; margin:22px 0 6px; flex-wrap:wrap;
+  }
+  .langbar button{
+    font-family:'Inter',sans-serif; font-size:13.5px; font-weight:600;
+    padding:8px 18px; border-radius:999px; border:1.5px solid var(--gold);
+    background:transparent; color:var(--maroon-deep); cursor:pointer;
+    transition:all .25s ease; letter-spacing:0.01em;
+  }
+  .langbar button.active{
+    background:var(--maroon); border-color:var(--maroon); color:var(--gold-soft);
+    box-shadow:var(--shadow);
+  }
+  .langbar button:hover:not(.active){ background:rgba(198,149,43,0.12); }
+  .autonote{
+    text-align:center; font-size:12px; color:var(--ink-soft); margin-bottom:8px; font-style:italic;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{ text-align:center; padding:34px 0 30px; position:relative; }
+  .invocation{
+    font-family:var(--f-display); font-weight:600; color:var(--gold); font-size:15px;
+    letter-spacing:0.03em; margin-bottom:16px;
+  }
+  h1{
+    font-family:var(--f-display); font-weight:700; color:var(--maroon-deep);
+    font-size:clamp(26px,6vw,38px); line-height:1.28; margin-bottom:18px;
+  }
+  .tagline{
+    font-size:16.5px; color:var(--ink-soft); max-width:560px; margin:0 auto;
+  }
+
+  .arch-divider{ width:100%; display:flex; justify-content:center; margin:30px 0; }
+  .arch-divider svg{ width:220px; height:auto; }
+
+  /* ---------- ABOUT ---------- */
+  section{ padding:12px 0 8px; }
+  h2{
+    font-family:var(--f-display); font-weight:700; color:var(--navy);
+    font-size:clamp(20px,4vw,25px); margin-bottom:16px; display:flex; align-items:center; gap:10px;
+  }
+  h2::before{
+    content:""; width:22px; height:2px; background:var(--gold); display:inline-block; flex-shrink:0;
+  }
+  .prose p{ font-size:15.5px; color:var(--ink); margin-bottom:14px; }
+  .prose{ margin-bottom:8px; }
+
+  /* ---------- PLEDGE / DIYA CARD ---------- */
+  .pledge-card{
+    background:var(--paper); border:1px solid var(--line); border-radius:18px;
+    padding:30px 26px; margin:26px 0 8px; box-shadow:var(--shadow); position:relative; overflow:hidden;
+  }
+  .pledge-card::after{
+    content:""; position:absolute; top:-40px; right:-40px; width:140px; height:140px; border-radius:50%;
+    background:radial-gradient(circle, rgba(198,149,43,0.14), transparent 70%);
+  }
+  .pledge-title{
+    font-family:var(--f-display); font-weight:700; color:var(--maroon); font-size:18px; margin-bottom:4px;
+  }
+  .pledge-sub{ font-size:13px; color:var(--ink-soft); margin-bottom:20px; }
+  ul.pledge-list{ list-style:none; }
+  ul.pledge-list li{
+    display:flex; align-items:flex-start; gap:12px; padding:11px 0; border-bottom:1px dashed var(--line);
+    font-size:15px; opacity:0; transform:translateY(8px); transition:opacity .5s ease, transform .5s ease;
+  }
+  ul.pledge-list li:last-child{ border-bottom:none; }
+  ul.pledge-list li.lit{ opacity:1; transform:translateY(0); }
+  .diya{
+    flex-shrink:0; width:22px; height:22px; margin-top:1px; position:relative;
+  }
+  .diya svg{ width:100%; height:100%; }
+  .diya .flame{ transform-origin:11px 6px; animation:flicker 1.8s ease-in-out infinite; opacity:0; }
+  li.lit .diya .flame{ opacity:1; }
+  @keyframes flicker{
+    0%,100%{ transform:scaleY(1) rotate(0deg); }
+    25%{ transform:scaleY(1.08) rotate(-2deg); }
+    50%{ transform:scaleY(0.95) rotate(1deg); }
+    75%{ transform:scaleY(1.05) rotate(-1deg); }
+  }
+
+  .pledge-btn-wrap{ text-align:center; margin-top:22px; }
+  .pledge-btn{
+    font-family:'Inter',sans-serif; font-weight:600; font-size:14.5px;
+    background:var(--maroon); color:var(--gold-soft); border:none; border-radius:999px;
+    padding:13px 30px; cursor:pointer; box-shadow:var(--shadow); transition:transform .2s ease, background .2s ease;
+  }
+  .pledge-btn:hover{ transform:translateY(-2px); background:var(--maroon-deep); }
+  .pledge-btn.taken{ background:var(--forest); }
+  .pledge-confirm{
+    margin-top:12px; font-size:13.5px; color:var(--forest); font-weight:600; opacity:0; transition:opacity .4s ease;
+  }
+  .pledge-confirm.show{ opacity:1; }
+
+  /* ---------- INITIATOR ---------- */
+  .initiator{
+    background:var(--navy); color:var(--cream); border-radius:18px; padding:28px 26px;
+    margin:34px 0 8px; box-shadow:var(--shadow);
+  }
+  .initiator h2{ color:var(--gold-soft); }
+  .initiator h2::before{ background:var(--gold-soft); }
+  .initiator .name{ font-family:var(--f-display); font-weight:600; font-size:17px; margin-bottom:2px; }
+  .initiator .org{ font-size:13.5px; color:rgba(251,243,225,0.75); margin-bottom:14px; }
+  .initiator .row{ display:flex; align-items:center; gap:9px; font-size:14.5px; margin-bottom:8px; }
+  .initiator a{ color:var(--gold-soft); text-decoration:none; border-bottom:1px solid rgba(231,206,142,0.4); }
+  .initiator a:hover{ border-bottom-color:var(--gold-soft); }
+
+  /* ---------- QUOTE FOOTER ---------- */
+  .closing{ text-align:center; padding:44px 0 20px; }
+  .closing blockquote{
+    font-family:var(--f-display); font-weight:600; color:var(--maroon-deep);
+    font-size:clamp(17px,3.6vw,21px); line-height:1.5; max-width:480px; margin:0 auto 20px;
+  }
+  footer{
+    text-align:center; padding:22px 0 40px; font-size:12px; color:var(--ink-soft);
+  }
+  footer .om{ font-size:20px; color:var(--gold); margin-bottom:8px; }
+
+  @media (max-width:420px){
+    .wrap{ padding:0 18px; }
+    .pledge-card, .initiator{ padding:24px 18px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.001ms !important; transition-duration:0.001ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toran">
+  <svg viewBox="0 0 800 34" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="bunting" width="40" height="34" patternUnits="userSpaceOnUse">
+        <path d="M0,0 L20,26 L40,0 Z" fill="#7A1F2A"/>
+        <path d="M20,26 L20,10" stroke="#C6952B" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="800" height="4" fill="#C6952B"/>
+    <rect y="4" width="800" height="30" fill="url(#bunting)"/>
+  </svg>
+</div>
+
+<div class="wrap">
+
+  <header>
+    <div class="kalash">🛕</div>
+    <div class="eyebrow" lang-block="gu">સ્વચ્છ મંદિર અભિયાન</div>
+    <div class="eyebrow" lang-block="hi">स्वच्छ मंदिर अभियान</div>
+    <div class="eyebrow" lang-block="en">Swachh Mandir Initiative</div>
+    <div class="brandline">
+      <span lang-block="gu">સ્વચ્છ મંદિર · હરિત મંદિર</span>
+      <span lang-block="hi">स्वच्छ मंदिर · हरित मंदिर</span>
+      <span lang-block="en">Clean Temple · Green Temple</span>
+    </div>
+  </header>
+
+  <nav class="langbar" role="group" aria-label="Language selector">
+    <button data-set-lang="gu" id="btn-gu">ગુજરાતી</button>
+    <button data-set-lang="hi" id="btn-hi">हिंदी</button>
+    <button data-set-lang="en" id="btn-en">English</button>
+  </nav>
+  <p class="autonote" id="autonote"></p>
+
+  <section class="hero">
+    <div class="invocation">
+      <span lang-block="gu">॥ જય શ્રી કૃષ્ણ ॥ જય મહાદેવ ॥</span>
+      <span lang-block="hi">॥ जय श्री कृष्ण ॥ जय महादेव ॥</span>
+      <span lang-block="en">॥ Jai Shri Krishna ॥ Jai Mahadev ॥</span>
+    </div>
+    <h1>
+      <span lang-block="gu">સ્વચ્છ મંદિર – પ્લાસ્ટિક મુક્ત મંદિર અભિયાન</span>
+      <span lang-block="hi">स्वच्छ मंदिर – प्लास्टिक मुक्त मंदिर अभियान</span>
+      <span lang-block="en">Clean Temple – Plastic Free Temple Initiative</span>
+    </h1>
+    <p class="tagline">
+      <span lang-block="gu">મંદિરની પવિત્રતા જાળવીએ, પ્લાસ્ટિકનો ત્યાગ કરીએ.</span>
+      <span lang-block="hi">मंदिर की पवित्रता बनाए रखें, प्लास्टिक का त्याग करें।</span>
+      <span lang-block="en">Preserve temple sanctity — say no to plastic.</span>
+    </p>
+  </section>
+
+  <div class="arch-divider">
+    <svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10,55 L10,30 Q10,5 60,5 L160,5 Q210,5 210,30 L210,55" fill="none" stroke="#C6952B" stroke-width="2"/>
+      <circle cx="110" cy="14" r="3" fill="#7A1F2A"/>
+      <line x1="10" y1="55" x2="210" y2="55" stroke="#C6952B" stroke-width="2"/>
+    </svg>
+  </div>
+
+  <section class="prose">
+    <h2>
+      <span lang-block="gu">આ અભિયાન વિશે</span>
+      <span lang-block="hi">अभियान के बारे में</span>
+      <span lang-block="en">About the Campaign</span>
+    </h2>
+
+    <div lang-block="gu">
+      <p>મંદિર એ માત્ર ઇમારત નથી, પરંતુ શ્રદ્ધા, સંસ્કાર અને પવિત્રતાનું કેન્દ્ર છે.</p>
+      <p>આજના સમયમાં પ્લાસ્ટિક આપણા જીવનનો એક ભાગ બની ગયું છે. પરંતુ એક વખત વપરાતા પ્લાસ્ટિકથી આપણા મંદિરો, તળાવો, ગૌશાળાઓ અને પ્રકૃતિને નુકસાન પહોંચે છે.</p>
+      <p>પ્લાસ્ટિકનો સંપૂર્ણ ત્યાગ એક જ દિવસે શક્ય નથી. પરંતુ આપણે શરૂઆત તો કરી શકીએ. એટલા માટે આ અભિયાનની શરૂઆત મંદિરોમાંથી કરવામાં આવી છે.</p>
+      <p>ચાલો, આજથી મંદિર પરિસરમાં પ્લાસ્ટિક ન લાવવાનો સંકલ્પ કરીએ.</p>
+    </div>
+
+    <div lang-block="hi">
+      <p>मंदिर केवल एक इमारत नहीं, बल्कि श्रद्धा, संस्कार और पवित्रता का केंद्र है।</p>
+      <p>एकल उपयोग प्लास्टिक मंदिरों, तालाबों, गौशालाओं और प्रकृति को नुकसान पहुँचाता है।</p>
+      <p>पूर्ण त्याग एक दिन में संभव नहीं, लेकिन शुरुआत आज से हो सकती है।</p>
+      <p>आइए मंदिर परिसर में प्लास्टिक न लाने का संकल्प लें।</p>
+    </div>
+
+    <div lang-block="en">
+      <p>A temple is not merely a building — it is a centre of faith, culture, and purity.</p>
+      <p>Single-use plastic harms our temples, lakes, gaushalas, and nature at large.</p>
+      <p>Eliminating plastic completely may take time, but the beginning can start today — and that is why this campaign begins from our temples.</p>
+      <p>Let us pledge not to bring plastic into temple premises, starting now.</p>
+    </div>
+  </section>
+
+  <div class="pledge-card">
+    <div class="pledge-title">
+      <span lang-block="gu">શ્રાવણ સંકલ્પ</span>
+      <span lang-block="hi">श्रावण संकल्प</span>
+      <span lang-block="en">The Shravan Pledge</span>
+    </div>
+    <div class="pledge-sub">
+      <span lang-block="gu">દરેક પંક્તિ પર દીવો પ્રગટે છે — સ્ક્રોલ કરો.</span>
+      <span lang-block="hi">हर पंक्ति पर दीया जलता है — स्क्रॉल करें।</span>
+      <span lang-block="en">A lamp lights with every line — scroll to read.</span>
+    </div>
+
+    <ul class="pledge-list" id="pledgeList">
+      <li><span class="diya">
+        <svg viewBox="0 0 22 22"><ellipse cx="11" cy="16" rx="9" ry="3.4" fill="#C6952B"/><ellipse cx="11" cy="15" rx="7" ry="2.4" fill="#7A1F2A"/><path class="flame" d="M11 12 C 9 9, 12 7, 11 3 C 14 6, 13 9, 11 12 Z" fill="#E88A2E"/></svg>
+      </span>
+        <span lang-block="gu">મંદિર પરિસરમાં પ્લાસ્ટિક નહીં લાવું</span>
+        <span lang-block="hi">मंदिर परिसर में प्लास्टिक नहीं लाऊँगा</span>
+        <span lang-block="en">I will not bring plastic into temple premises</span>
+      </li>
+      <li><span class="diya">
+        <svg viewBox="0 0 22 22"><ellipse cx="11" cy="16" rx="9" ry="3.4" fill="#C6952B"/><ellipse cx="11" cy="15" rx="7" ry="2.4" fill="#7A1F2A"/><path class="flame" d="M11 12 C 9 9, 12 7, 11 3 C 14 6, 13 9, 11 12 Z" fill="#E88A2E"/></svg>
+      </span>
+        <span lang-block="gu">પ્રસાદ માટે કપડાની થેલી અથવા સ્ટીલના વાસણનો ઉપયોગ કરીશ</span>
+        <span lang-block="hi">कपड़े की थैली या स्टील पात्र का उपयोग करूँगा</span>
+        <span lang-block="en">I will use cloth bags or steel containers for prasad</span>
+      </li>
+      <li><span class="diya">
+        <svg viewBox="0 0 22 22"><ellipse cx="11" cy="16" rx="9" ry="3.4" fill="#C6952B"/><ellipse cx="11" cy="15" rx="7" ry="2.4" fill="#7A1F2A"/><path class="flame" d="M11 12 C 9 9, 12 7, 11 3 C 14 6, 13 9, 11 12 Z" fill="#E88A2E"/></svg>
+      </span>
+        <span lang-block="gu">મંદિર પરિસરમાં કચરો નહીં ફેંકું</span>
+        <span lang-block="hi">कचरा नहीं फैलाऊँगा</span>
+        <span lang-block="en">I will not litter in temple premises</span>
+      </li>
+      <li><span class="diya">
+        <svg viewBox="0 0 22 22"><ellipse cx="11" cy="16" rx="9" ry="3.4" fill="#C6952B"/><ellipse cx="11" cy="15" rx="7" ry="2.4" fill="#7A1F2A"/><path class="flame" d="M11 12 C 9 9, 12 7, 11 3 C 14 6, 13 9, 11 12 Z" fill="#E88A2E"/></svg>
+      </span>
+        <span lang-block="gu">પરિવાર અને મિત્રોને પણ આ અભિયાન સાથે જોડાવીશ</span>
+        <span lang-block="hi">परिवार और मित्रों को जोड़ूँगा</span>
+        <span lang-block="en">I will invite my family and friends to join this campaign</span>
+      </li>
+      <li><span class="diya">
+        <svg viewBox="0 0 22 22"><ellipse cx="11" cy="16" rx="9" ry="3.4" fill="#C6952B"/><ellipse cx="11" cy="15" rx="7" ry="2.4" fill="#7A1F2A"/><path class="flame" d="M11 12 C 9 9, 12 7, 11 3 C 14 6, 13 9, 11 12 Z" fill="#E88A2E"/></svg>
+      </span>
+        <span lang-block="gu">મારા ગામ, શહેર અને મંદિરને સ્વચ્છ રાખવામાં સહભાગી બનીશ</span>
+        <span lang-block="hi">स्वच्छता अभियान में सहयोग करूँगा</span>
+        <span lang-block="en">I will help keep my village, city and temple clean</span>
+      </li>
+    </ul>
+
+    <div class="pledge-btn-wrap">
+      <button class="pledge-btn" id="pledgeBtn">
+        <span lang-block="gu">હું સંકલ્પ લઉં છું</span>
+        <span lang-block="hi">मैं संकल्प लेता/लेती हूँ</span>
+        <span lang-block="en">I Take This Pledge</span>
+      </button>
+      <div class="pledge-confirm" id="pledgeConfirm">
+        <span lang-block="gu">🙏 તમારો સંકલ્પ નોંધાયો. જય શ્રી કૃષ્ણ!</span>
+        <span lang-block="hi">🙏 आपका संकल्प दर्ज हुआ। जय श्री कृष्ण!</span>
+        <span lang-block="en">🙏 Your pledge is noted. Jai Shri Krishna!</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="initiator">
+    <h2>
+      <span lang-block="gu">અભિયાનના પ્રેરક</span>
+      <span lang-block="hi">अभियान के प्रेरक</span>
+      <span lang-block="en">Campaign Initiator</span>
+    </h2>
+    <div class="name">
+      <span lang-block="gu">સ્મિત અનિરુદ્ધભાઈ ઉપાધ્યાય (મુખ્યાજી)</span>
+      <span lang-block="hi">स्मित अनिरुद्धभाई उपाध्याय (मुख्याजी)</span>
+      <span lang-block="en">Smit Aniruddhabhai Upadhyay (Mukhyaji)</span>
+    </div>
+    <div class="org">Mukhyaji Group · Darbar Gadh Road, Gariyadhar, Gujarat, India</div>
+    <div class="row">📞 <a href="tel:+917096207111">+91 70962 07111</a></div>
+    <div class="row">🌐 <a href="https://mukhyaji.in" target="_blank" rel="noopener">Mukhyaji.in</a></div>
+  </div>
+
+  <div class="closing">
+    <blockquote>
+      <span lang-block="gu">“એક મંદિર સ્વચ્છ બનશે, તો એક સમાજ પ્રેરિત બનશે.”</span>
+      <span lang-block="hi">“एक स्वच्छ मंदिर पूरे समाज को प्रेरित कर सकता है।”</span>
+      <span lang-block="en">“One clean temple can inspire an entire society.”</span>
+    </blockquote>
+  </div>
+
+  <footer>
+    <div class="om">🕉️</div>
+    <div>
+      <span lang-block="gu">સ્વચ્છતા ત્યાં પ્રભુતા — Swachh Mandir</span>
+      <span lang-block="hi">स्वच्छता वहाँ प्रभुता — Swachh Mandir</span>
+      <span lang-block="en">Where cleanliness is, God resides — Swachh Mandir</span>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var SUPPORTED = ['gu','hi','en'];
+  var STORAGE_KEY = 'swachhmandir-lang';
+
+  function detectLang(){
+    var saved = null;
+    try { saved = localStorage.getItem(STORAGE_KEY); } catch(e){}
+    if (saved && SUPPORTED.indexOf(saved) !== -1) return { lang: saved, auto:false };
+
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    var langs = navigator.languages ? navigator.languages.map(function(l){return l.toLowerCase();}) : [nav];
+    for (var i=0;i<langs.length;i++){
+      if (langs[i].indexOf('gu') === 0) return { lang:'gu', auto:true };
+      if (langs[i].indexOf('hi') === 0) return { lang:'hi', auto:true };
+      if (langs[i].indexOf('en') === 0) return { lang:'en', auto:true };
+    }
+    return { lang:'gu', auto:true }; // default fallback: Gujarati
+  }
+
+  function setLang(lang, remember){
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+    ['gu','hi','en'].forEach(function(l){
+      document.getElementById('btn-'+l).classList.toggle('active', l===lang);
+    });
+    if (remember){
+      try { localStorage.setItem(STORAGE_KEY, lang); } catch(e){}
+    }
+  }
+
+  var detected = detectLang();
+  setLang(detected.lang, false);
+
+  var noteEl = document.getElementById('autonote');
+  var notes = {
+    gu: 'તમારા ડિવાઇસની ભાષા મુજબ પસંદ થયું — જરૂર મુજબ બદલો.',
+    hi: 'आपकी डिवाइस की भाषा के अनुसार चुना गया — ज़रूरत अनुसार बदलें।',
+    en: 'Auto-selected based on your device language — switch anytime.'
+  };
+  if (detected.auto) noteEl.textContent = notes[detected.lang];
+
+  ['gu','hi','en'].forEach(function(l){
+    document.getElementById('btn-'+l).addEventListener('click', function(){
+      setLang(l, true);
+      noteEl.textContent = '';
+    });
+  });
+
+  // Diya scroll-reveal
+  var items = document.querySelectorAll('#pledgeList li');
+  if ('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('lit');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    items.forEach(function(li){ obs.observe(li); });
+  } else {
+    items.forEach(function(li){ li.classList.add('lit'); });
+  }
+
+  // Pledge button
+  var btn = document.getElementById('pledgeBtn');
+  var confirm = document.getElementById('pledgeConfirm');
+  btn.addEventListener('click', function(){
+    btn.classList.add('taken');
+    confirm.classList.add('show');
+    try { localStorage.setItem('swachhmandir-pledge-taken', '1'); } catch(e){}
+  });
+  try {
+    if (localStorage.getItem('swachhmandir-pledge-taken') === '1'){
+      btn.classList.add('taken');
+      confirm.classList.add('show');
+    }
+  } catch(e){}
+})();
+</script>
+
+</body>
+</html>
